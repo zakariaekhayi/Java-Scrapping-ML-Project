@@ -1,0 +1,12 @@
+@relation jobs
+
+@attribute Ville NUMERIC
+@attribute Secteur_activite NUMERIC
+@attribute Type_contrat NUMERIC
+@attribute Niveau_etudes NUMERIC
+@attribute Experience NUMERIC
+@attribute Langue NUMERIC
+@attribute Teletravail NUMERIC
+
+@data
+0,47,0,5,0,2,0

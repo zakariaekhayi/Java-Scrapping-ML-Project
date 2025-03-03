@@ -1,0 +1,1596 @@
+@relation fillo
+
+@attribute Ville {Casablanca,Tanger,Settat,Marrakech,Rabat,Agadir,Fès,'Al Hoceima',Oujda,Meknès,Laâyoune,Safi}
+@attribute Secteur_activite {RH,Commercial,'Administration des ventes','Call Centers (métiers de) - Commercial',Production,Achats,'Centres d\'appels','Gestion projet',Informatique,'Assistanat de Direction',Gestion,Communication,Audit,Méthodes,Télécoms,'Call Centers (métiers de) - Hôtellerie','Agriculture (métiers de l\') - Secteur Agroalimentaire - Chimie','Call Centers (métiers de) - Secteur Centre d\'appel','Environnement (métiers de l\') - Secteur Agroalimentaire - Chimie','Imprimerie (métiers de l\') - Multimédia',Multimédia,Hôtellerie,'Call Centers (métiers de) - Secteur Centre d\'appel - Offshoring','Electricité - Méthodes','Assurance (métiers de l\') - Banque (métiers de la) - Secteur Assurance',Médical,'Assurance (métiers de l\') - Gestion projet','Call Centers (métiers de) - Secteur Centre d\'appel -',Avocat,'Marketing - Secteur Import','Environnement (métiers de l\') - Gestion projet',Travaux,'Environnement (métiers de l\') - Travaux','Agriculture (métiers de l\') - Secteur Agriculture','Agriculture (métiers de l\') - Travaux','Electricité - Travaux',Logistique,'Marketing - Secteur Internet','Assurance (métiers de l\') - Avocat','Agriculture (métiers de l\') - Gestion projet','Electricité - Informatique','Banque (métiers de la) - Gestion','Responsable de Département - Secteur Enseignement','Call Centers (métiers de) - Informatique','Direction Générale - Direction des Opérations - Secteur Autres Industries','Call Centers (métiers de) - Secteur Autres services','- Secteur Extraction','Distribution (métiers de la) - Secteur Distribution','Call Centers (métiers de) - Secteur Centre d\'appel - Conseil','Enseignement - Secteur Enseignement','Enseignement - Médical','Marketing - Secteur Enseignement','Call Centers (métiers de) - Télécoms','Banque (métiers de la) - Secteur Banque','Marketing - Secteur Agence pub','Marketing - Secteur Automobile','Imprimerie (métiers de l\') - Secteur Internet','Electricité - Production','Distribution (métiers de la) - Electricité - Secteur Electronique - Electricité','Assurance (métiers de l\') - Call Centers (métiers de) - Secteur Centre d\'appel','Marketing - Secteur Agroalimentaire - Distribution','Direction des Opérations - Secteur Indifférent','- Secteur Agroalimentaire','Direction Marketing - Secteur Agroalimentaire - Distribution','Tourisme (métiers du) - Secteur Tourisme','Agriculture (métiers de l\') - Enseignement - Secteur Agriculture','Call Centers (métiers de) - Secteur Assurance','Assurance (métiers de l\') - Secteur Assurance','Environnement (métiers de l\') - Secteur Agriculture','Distribution (métiers de la) - Secteur Energie - Pétrole','Environnement (métiers de l\') - Santé',Santé,'Marketing - Secteur Cosmétique','Distribution (métiers de la) - Gestion','Assurance (métiers de l\') - Informatique','Agriculture (métiers de l\') - Production','Assurance (métiers de l\') - Gestion','Electricité - Secteur Automobile','Call Centers (métiers de) - Secteur Offshoring','Direction Financière - Direction de la Stratégie','Electricité - Gestion projet','Environnement (métiers de l\') - Production','Enseignement - Santé','Direction Financière - Secteur Indifférent',Caméraman,'Enseignement - Secteur Conseil','Call Centers (métiers de) - RH',Immobilier,'Environnement (métiers de l\') - Secteur Extraction',Urbanisme,'Enseignement - Gestion projet','Direction des Ressources Humaines - Secteur Autres Industries','Direction Financière - Secteur Immobilier','Direction Informatique - Direction Technique',Commerce,Banque,Assurance,Télécommunications,Comptabilité,Autres,Tourisme,Education,BTP,'Fraichement diplômé','Industrie pétrolière','Industrie automobile',Conseil,'Débutant (de 1 à 3 ans)',Artisanat,Sports,Edition,'Junior (de 3 à 5 ans)','Grande distribution',Enseignement,'Industrie textile','Energies (production, distribution...)',Allemand,'Industries (autres)'}
+@attribute Type_contrat {CDI,Autre,CDD,Intérim,Stage,Freelance,'Free Lance','Lettre d\'Engagement','CDI / CDD','CDI / Intérim','CDI / CDD / Free Lance','CDI / Free Lance'}
+@attribute Niveau_etudes {'Bac +2','Bac +3','Bac +5','Qualification avant Bac',Autre}
+@attribute Experience {Intermediaire,Debutant,Senior,'Expert '}
+@attribute Langue {'Anglais Français',Français,Anglais}
+@attribute Teletravail {Non,Hybride,'Oui 100\%'}
+
+@data
+Casablanca,RH,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +2',Intermediaire,Français,Non
+Tanger,'Administration des ventes',CDI,'Bac +2',Debutant,Français,Non
+Tanger,'Call Centers (métiers de) - Commercial',CDI,'Bac +2',Debutant,Anglais,Non
+Tanger,'Call Centers (métiers de) - Commercial',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Settat,Production,CDI,'Bac +2',Senior,'Anglais Français',Non
+Casablanca,Achats,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Marrakech,'Gestion projet',CDI,'Qualification avant Bac',Intermediaire,Français,Non
+Casablanca,Production,CDI,'Bac +5','Expert ',Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Debutant,'Anglais Français',Hybride
+Casablanca,Informatique,CDI,'Bac +5',Debutant,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Debutant,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Tanger,'Call Centers (métiers de) - Commercial',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Assistanat de Direction',CDI,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Gestion,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Production,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Rabat,Communication,CDI,'Bac +5',Senior,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Debutant,Anglais,Non
+Agadir,Audit,CDI,'Bac +5',Intermediaire,Français,Non
+Agadir,Achats,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Fès,Méthodes,Autre,'Bac +5',Debutant,Français,Hybride
+Fès,Méthodes,Autre,'Bac +5',Debutant,Anglais,Hybride
+Fès,Télécoms,Autre,'Bac +5',Debutant,'Anglais Français',Non
+Tanger,Production,CDI,'Bac +2',Intermediaire,Français,Non
+'Al Hoceima',Production,CDI,'Bac +5',Intermediaire,Anglais,Non
+'Al Hoceima',Production,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Gestion projet',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,RH,CDI,'Bac +5','Expert ',Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,'Call Centers (métiers de) - Hôtellerie',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Rabat,'Gestion projet',CDD,'Bac +5',Debutant,Français,Non
+Marrakech,'Gestion projet',CDI,'Bac +5','Expert ','Anglais Français',Non
+Rabat,RH,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Agriculture (métiers de l\') - Secteur Agroalimentaire - Chimie',CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,'Call Centers (métiers de) - Secteur Centre d\'appel',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Environnement (métiers de l\') - Secteur Agroalimentaire - Chimie',CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Casablanca,'Assistanat de Direction',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Assistanat de Direction',Intérim,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Anglais,'Oui 100\%'
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Call Centers (métiers de) - Hôtellerie',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Télécoms,CDI,'Bac +5',Senior,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Rabat,'Assistanat de Direction',CDI,'Bac +3',Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,'Imprimerie (métiers de l\') - Multimédia',CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Gestion projet',CDI,'Bac +2','Expert ',Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,Gestion,CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Anglais,Non
+Tanger,'Assistanat de Direction',Autre,'Bac +2',Debutant,Français,Non
+Tanger,'Call Centers (métiers de) - Commercial',CDI,'Bac +2',Debutant,Français,Non
+Tanger,'Call Centers (métiers de) - Commercial',CDI,'Bac +2',Debutant,Français,Non
+Tanger,'Call Centers (métiers de) - Commercial',CDI,'Bac +2',Debutant,Anglais,Non
+Tanger,'Call Centers (métiers de) - Commercial',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Rabat,'Gestion projet',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,RH,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Fès,Télécoms,Autre,'Bac +5',Debutant,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Fès,Télécoms,CDI,'Bac +5',Debutant,Français,Hybride
+Fès,Télécoms,Autre,'Bac +3',Debutant,Anglais,Hybride
+Fès,Télécoms,Autre,Autre,Debutant,Français,Hybride
+Rabat,Télécoms,CDI,'Bac +5',Debutant,Français,Hybride
+Rabat,Gestion,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Rabat,Achats,CDI,'Bac +5',Intermediaire,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Rabat,Audit,CDI,'Bac +5',Intermediaire,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Rabat,Audit,CDI,'Bac +5',Debutant,'Anglais Français',Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Audit,CDI,'Bac +5',Debutant,'Anglais Français',Hybride
+Rabat,Multimédia,CDI,'Bac +5',Senior,'Anglais Français',Hybride
+Casablanca,Hôtellerie,CDI,'Bac +3',Senior,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Commercial,CDD,'Bac +3',Debutant,Français,Non
+Casablanca,'Call Centers (métiers de) - Secteur Centre d\'appel - Offshoring',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Production,CDI,'Bac +3',Senior,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Agadir,Achats,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Achats,CDI,'Bac +5',Senior,'Anglais Français',Non
+Marrakech,Hôtellerie,CDD,Autre,Debutant,'Anglais Français',Non
+Casablanca,Audit,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Electricité - Méthodes',CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Assurance (métiers de l\') - Banque (métiers de la) - Secteur Assurance',Autre,'Bac +3',Intermediaire,Anglais,Non
+Tanger,Commercial,Intérim,'Bac +2',Debutant,'Anglais Français',Non
+Marrakech,'Gestion projet',CDD,'Bac +5',Debutant,Français,Non
+Marrakech,Médical,CDI,'Bac +5',Intermediaire,Anglais,Non
+Marrakech,RH,CDI,'Bac +5',Senior,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Assurance (métiers de l\') - Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,Achats,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Marrakech,'Call Centers (métiers de) - Hôtellerie',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Rabat,RH,CDI,'Bac +3',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+'Al Hoceima',Méthodes,CDI,'Bac +3',Intermediaire,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Agadir,Hôtellerie,CDD,Autre,Debutant,'Anglais Français',Non
+Casablanca,Production,CDI,'Bac +5',Senior,Anglais,Non
+Rabat,Informatique,CDI,'Bac +5',Senior,'Anglais Français',Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Commercial,Intérim,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Gestion,CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Audit,CDI,'Bac +3',Debutant,'Anglais Français',Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Gestion projet',CDI,'Bac +3',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Anglais,Hybride
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Anglais,Hybride
+Casablanca,'Call Centers (métiers de) - Secteur Centre d\'appel -',Autre,'Bac +3',Debutant,'Anglais Français',Non
+'Al Hoceima',Commercial,Autre,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Hôtellerie,Intérim,'Bac +2',Debutant,Anglais,Non
+Casablanca,Achats,Autre,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Avocat,CDI,'Bac +5',Senior,Anglais,Non
+Oujda,Méthodes,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Audit,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Marketing - Secteur Import',CDI,'Bac +3',Debutant,Anglais,Non
+Casablanca,Communication,CDI,'Bac +5',Intermediaire,Français,Non
+Rabat,'Environnement (métiers de l\') - Gestion projet',CDI,'Bac +5',Intermediaire,Français,Non
+Rabat,Travaux,CDI,'Bac +5',Intermediaire,Anglais,Non
+Rabat,'Assistanat de Direction',CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Rabat,'Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+'Al Hoceima',Travaux,CDD,'Bac +2',Intermediaire,Français,Non
+Rabat,'Gestion projet',CDI,'Bac +5',Debutant,Français,Non
+Rabat,'Gestion projet',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,'Environnement (métiers de l\') - Travaux',CDI,'Bac +2',Debutant,Français,Non
+Rabat,Médical,CDD,'Bac +3',Debutant,'Anglais Français',Non
+Rabat,Informatique,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,'Environnement (métiers de l\') - Travaux',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Rabat,'Agriculture (métiers de l\') - Secteur Agriculture',CDD,'Bac +2',Debutant,'Anglais Français',Non
+Rabat,Travaux,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,Travaux,CDI,'Bac +2',Intermediaire,Anglais,Non
+Rabat,'Agriculture (métiers de l\') - Travaux',CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,Achats,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Rabat,'Gestion projet',CDI,'Bac +5',Senior,'Anglais Français',Non
+Rabat,'Electricité - Travaux',CDI,'Bac +2',Intermediaire,Anglais,Non
+Rabat,'Environnement (métiers de l\') - Travaux',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,Travaux,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,'Assistanat de Direction',CDI,'Bac +3',Intermediaire,Anglais,Non
+Rabat,Travaux,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,Travaux,CDD,'Bac +2',Intermediaire,Français,Non
+Rabat,'Gestion projet',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Achats,CDI,'Bac +3',Debutant,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Tanger,Production,CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Commercial,CDI,'Bac +3',Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,RH,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Assistanat de Direction',CDI,Autre,Senior,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Logistique,CDI,'Bac +3',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Logistique,CDI,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,'Marketing - Secteur Internet',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Call Centers (métiers de) - Hôtellerie',CDI,'Bac +2',Debutant,Français,Non
+Rabat,'Call Centers (métiers de) - Hôtellerie',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Assurance (métiers de l\') - Avocat',CDI,'Bac +5',Senior,Français,Non
+Casablanca,Gestion,CDI,'Bac +5',Intermediaire,Anglais,Non
+Agadir,Production,CDD,'Bac +2',Debutant,Français,Non
+Casablanca,Communication,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,RH,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Marrakech,'Administration des ventes',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Agriculture (métiers de l\') - Gestion projet',CDI,'Bac +5',Senior,Anglais,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Médical,CDI,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,Gestion,Stage,'Bac +3',Debutant,Français,Non
+Casablanca,Médical,CDI,'Bac +3',Debutant,Français,Non
+Casablanca,Médical,CDI,'Bac +3',Debutant,Français,Non
+Casablanca,Gestion,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,RH,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Gestion,Intérim,'Bac +3',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Administration des ventes',CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Avocat,CDI,Autre,Senior,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Rabat,Communication,CDI,'Bac +3',Intermediaire,Anglais,Non
+Marrakech,'Call Centers (métiers de) - Secteur Centre d\'appel',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Administration des ventes',CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Call Centers (métiers de) - Commercial',CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,Gestion,CDI,Autre,Senior,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Français,Hybride
+Rabat,'Call Centers (métiers de) - Secteur Centre d\'appel',CDI,Autre,Debutant,Français,Non
+Casablanca,'Gestion projet',CDI,'Bac +5',Senior,Français,Non
+Casablanca,'Electricité - Informatique',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Banque (métiers de la) - Gestion',CDI,'Bac +5',Intermediaire,Anglais,Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+Marrakech,'Responsable de Département - Secteur Enseignement',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Informatique,Autre,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Call Centers (métiers de) - Informatique',CDI,'Bac +2',Debutant,Anglais,Non
+Agadir,Achats,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Tanger,Hôtellerie,Intérim,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Direction Générale - Direction des Opérations - Secteur Autres Industries',CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Gestion projet',CDD,'Bac +3',Debutant,Anglais,Non
+Casablanca,'Administration des ventes',CDI,'Bac +3',Intermediaire,Français,Non
+Casablanca,Gestion,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Gestion projet',CDI,'Bac +3',Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Communication,CDI,Autre,Intermediaire,Français,Non
+Casablanca,'Call Centers (métiers de) - Secteur Autres services',CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,'- Secteur Extraction',CDI,'Bac +5','Expert ',Anglais,Non
+Casablanca,Commercial,CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Méthodes,CDI,'Bac +5',Senior,'Anglais Français',Non
+Tanger,Production,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Commercial,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +3',Intermediaire,Français,'Oui 100\%'
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Anglais,Hybride
+Casablanca,Méthodes,CDI,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Marrakech,Informatique,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Commercial,Autre,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Gestion,Intérim,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Achats,CDI,Autre,Debutant,Anglais,'Oui 100\%'
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Achats,CDD,'Bac +5',Intermediaire,'Anglais Français',Non
+Rabat,'Call Centers (métiers de) - Secteur Centre d\'appel',CDI,'Bac +3',Debutant,Français,Non
+Casablanca,Multimédia,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Multimédia,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Casablanca,Multimédia,CDI,'Bac +5',Debutant,'Anglais Français',Hybride
+Casablanca,'Distribution (métiers de la) - Secteur Distribution',Stage,'Bac +3',Debutant,Français,Non
+Casablanca,'Call Centers (métiers de) - Secteur Centre d\'appel - Conseil',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Marrakech,'Enseignement - Secteur Enseignement',CDI,'Bac +2',Senior,'Anglais Français',Non
+Marrakech,'Enseignement - Médical',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Marrakech,'Enseignement - Médical',CDI,'Bac +2','Expert ',Français,Non
+Marrakech,Médical,CDI,'Bac +2',Intermediaire,Anglais,Non
+Marrakech,'Marketing - Secteur Enseignement',CDI,'Bac +5',Intermediaire,Anglais,Non
+Marrakech,'Enseignement - Médical',CDI,'Bac +2',Senior,Anglais,Non
+Marrakech,Médical,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Achats,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +3',Senior,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Call Centers (métiers de) - Télécoms',CDI,Autre,Debutant,Anglais,Non
+Rabat,Médical,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,'Enseignement - Secteur Enseignement',CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Rabat,Gestion,CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Production,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Tanger,Production,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,Informatique,CDI,Autre,Senior,Anglais,Hybride
+Rabat,Informatique,CDI,'Bac +5',Senior,Français,Hybride
+Rabat,Informatique,CDI,Autre,Senior,'Anglais Français',Hybride
+Rabat,Informatique,CDI,Autre,Senior,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Banque (métiers de la) - Secteur Banque',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Anglais,Hybride
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Anglais,Hybride
+Casablanca,Informatique,CDI,'Bac +3',Intermediaire,Anglais,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Français,'Oui 100\%'
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,'Anglais Français','Oui 100\%'
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,'Anglais Français',Hybride
+Rabat,Informatique,CDI,'Bac +5',Senior,Français,Hybride
+Casablanca,Achats,Intérim,'Bac +3',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Gestion,CDI,Autre,Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Marrakech,'Gestion projet',CDD,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,Hôtellerie,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Rabat,Informatique,CDI,Autre,Debutant,Anglais,Hybride
+Casablanca,'Call Centers (métiers de) - Hôtellerie',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,'Environnement (métiers de l\') - Travaux',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Audit,CDI,Autre,Intermediaire,Français,Non
+Tanger,Achats,CDI,'Bac +5',Intermediaire,Anglais,Non
+Rabat,Multimédia,CDI,'Bac +5',Senior,'Anglais Français',Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Tanger,Commercial,Autre,'Bac +2',Debutant,Français,Non
+Casablanca,'Marketing - Secteur Agence pub',CDI,Autre,Senior,Anglais,Non
+Tanger,Audit,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,Commercial,CDI,Autre,Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Marketing - Secteur Automobile',Autre,Autre,Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Gestion projet',CDI,'Bac +5',Intermediaire,Français,Non
+Rabat,Gestion,CDI,'Bac +3',Debutant,Anglais,Non
+Rabat,Gestion,Stage,'Bac +3',Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +3',Intermediaire,Français,Non
+Casablanca,'Imprimerie (métiers de l\') - Secteur Internet',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Electricité - Production',Autre,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Achats,CDI,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,Gestion,CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Assistanat de Direction',Autre,'Bac +3',Debutant,Français,Non
+Marrakech,'Marketing - Secteur Enseignement',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Achats,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Casablanca,'Distribution (métiers de la) - Electricité - Secteur Electronique - Electricité',CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Casablanca,Médical,CDI,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,RH,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Production,CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Marrakech,'Administration des ventes',CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Audit,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Achats,CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,Informatique,CDI,Autre,Senior,Français,Non
+Casablanca,Commercial,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +3',Debutant,Anglais,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Rabat,Informatique,CDI,'Bac +5',Senior,Anglais,Hybride
+Casablanca,Gestion,CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Gestion,CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Gestion,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +5',Senior,Français,Non
+Casablanca,Avocat,CDI,'Bac +5',Senior,Anglais,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Rabat,Informatique,CDI,'Bac +2',Debutant,Anglais,'Oui 100\%'
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Production,CDD,'Bac +2',Debutant,Anglais,Non
+Fès,Production,CDD,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Call Centers (métiers de) - Secteur Centre d\'appel -',Autre,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Assurance (métiers de l\') - Call Centers (métiers de) - Secteur Centre d\'appel',CDI,Autre,Debutant,Français,Non
+Rabat,Audit,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Administration des ventes',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Achats,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Communication,CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,Hôtellerie,CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Assurance (métiers de l\') - Banque (métiers de la) - Secteur Assurance',CDI,'Bac +5',Senior,'Anglais Français',Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Rabat,Informatique,CDI,'Bac +5',Senior,'Anglais Français',Hybride
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,RH,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Environnement (métiers de l\') - Gestion projet',CDI,'Bac +5',Debutant,'Anglais Français',Hybride
+Casablanca,Commercial,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Marketing - Secteur Agroalimentaire - Distribution',CDI,'Bac +5',Senior,Français,Non
+Marrakech,Production,CDI,'Bac +5',Senior,Français,Non
+Casablanca,'Marketing - Secteur Agroalimentaire - Distribution',CDI,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Direction des Opérations - Secteur Indifférent',CDI,'Bac +5','Expert ',Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Agadir,'- Secteur Agroalimentaire',CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Gestion projet',CDI,Autre,Senior,Français,Non
+Casablanca,'Direction Marketing - Secteur Agroalimentaire - Distribution',CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Commercial,Intérim,'Bac +3',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Tourisme (métiers du) - Secteur Tourisme',CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Français,Non
+Rabat,Informatique,Intérim,'Bac +5',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Tanger,Achats,CDD,'Bac +5',Debutant,Anglais,Non
+Casablanca,Travaux,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Informatique,Stage,'Bac +5',Debutant,'Anglais Français',Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Audit,CDI,'Bac +5',Senior,Français,Non
+Casablanca,Audit,CDI,'Bac +5',Intermediaire,Français,Hybride
+Rabat,'Gestion projet',Intérim,'Bac +5',Senior,Anglais,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Agadir,RH,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Gestion,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,Hôtellerie,CDI,Autre,Senior,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Tanger,'Agriculture (métiers de l\') - Enseignement - Secteur Agriculture',Autre,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Achats,CDI,Autre,Intermediaire,'Anglais Français',Non
+Casablanca,'Call Centers (métiers de) - Secteur Assurance',CDI,'Bac +2',Debutant,Anglais,Hybride
+Rabat,'Call Centers (métiers de) - Secteur Assurance',CDI,'Bac +2',Debutant,Français,Hybride
+Rabat,Commercial,CDI,'Bac +2',Debutant,Français,Hybride
+Meknès,Commercial,CDI,'Bac +3',Senior,'Anglais Français',Non
+Marrakech,'Gestion projet',CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,'Enseignement - Secteur Enseignement',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,Gestion,CDI,'Bac +5',Intermediaire,Anglais,Non
+Rabat,'Assistanat de Direction',CDI,'Bac +3',Intermediaire,Anglais,Non
+Rabat,'Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Achats,CDI,'Bac +2',Intermediaire,Anglais,Non
+Marrakech,'Administration des ventes',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,Achats,CDI,'Bac +2',Debutant,Français,Non
+Agadir,'Assurance (métiers de l\') - Secteur Assurance',CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Français,Non
+Rabat,Informatique,CDI,Autre,Senior,'Anglais Français',Hybride
+Laâyoune,'Banque (métiers de la) - Secteur Banque',CDI,'Bac +5',Senior,Anglais,Non
+Rabat,Informatique,CDI,Autre,Senior,'Anglais Français',Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Oujda,'Environnement (métiers de l\') - Secteur Agriculture',CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Production,CDI,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Rabat,Informatique,CDI,'Bac +5',Senior,Français,Hybride
+Rabat,Informatique,CDI,'Bac +5',Senior,'Anglais Français',Hybride
+Casablanca,'Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+Marrakech,Hôtellerie,CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Médical,Stage,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Communication,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Communication,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Français,Hybride
+Casablanca,'Distribution (métiers de la) - Secteur Energie - Pétrole',Autre,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Français,Hybride
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Anglais,Hybride
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Laâyoune,Médical,CDI,'Bac +5','Expert ',Français,Non
+Tanger,RH,Autre,'Bac +3',Debutant,Français,Non
+Fès,'Call Centers (métiers de) - Secteur Centre d\'appel',CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Production,CDI,'Bac +5',Intermediaire,Anglais,Non
+Rabat,Informatique,CDI,'Bac +5',Senior,Anglais,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Avocat,CDI,'Bac +5',Debutant,'Anglais Français',Hybride
+Casablanca,Commercial,CDI,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,'Banque (métiers de la) - Secteur Banque',CDI,'Bac +5',Senior,'Anglais Français',Hybride
+Casablanca,RH,CDI,'Bac +3',Debutant,Français,Non
+Casablanca,Production,CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,Commercial,Autre,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Logistique,CDI,Autre,Senior,'Anglais Français',Non
+Casablanca,Gestion,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Achats,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Informatique,CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Informatique,Autre,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Settat,'Environnement (métiers de l\') - Santé',CDD,'Bac +3',Debutant,Français,Non
+Rabat,'Call Centers (métiers de) - Secteur Assurance',CDI,Autre,Debutant,'Anglais Français',Non
+Rabat,'Call Centers (métiers de) - Secteur Centre d\'appel',CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+Oujda,Production,CDI,'Bac +5',Senior,Français,Non
+Casablanca,'Assistanat de Direction',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Oujda,Méthodes,CDI,'Bac +3',Senior,'Anglais Français',Non
+Marrakech,Méthodes,CDI,'Bac +5',Intermediaire,Anglais,Non
+Tanger,Commercial,CDI,'Bac +3',Intermediaire,Français,Non
+Rabat,Communication,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Audit,Autre,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Assistanat de Direction',CDI,'Bac +3',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Français,Non
+Rabat,Gestion,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Commercial,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Production,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Avocat,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Méthodes,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Informatique,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Tanger,Production,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,'Gestion projet',CDD,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,'Gestion projet',CDD,'Bac +5',Intermediaire,Anglais,Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,Médical,CDI,'Bac +3',Debutant,Français,Non
+Rabat,Commercial,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,RH,Stage,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,Méthodes,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,'Call Centers (métiers de) - Commercial',CDI,Autre,Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Fès,Commercial,CDI,Autre,Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Production,CDI,'Bac +5','Expert ',Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Agadir,Achats,CDI,Autre,Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,RH,Stage,'Bac +3',Debutant,Anglais,Non
+Casablanca,RH,Stage,'Bac +3',Debutant,'Anglais Français',Non
+Oujda,Production,CDI,'Bac +3',Intermediaire,Anglais,Non
+Oujda,Méthodes,CDI,'Bac +3',Intermediaire,Anglais,Non
+Oujda,Production,CDI,'Bac +2',Senior,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Achats,CDI,'Bac +5',Senior,Anglais,Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Achats,CDD,'Bac +3',Debutant,Français,Non
+Casablanca,Gestion,Autre,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Informatique,CDI,Autre,Senior,'Anglais Français',Non
+Rabat,Commercial,CDI,'Bac +2',Debutant,Français,Hybride
+Rabat,'Call Centers (métiers de) - Secteur Assurance',CDI,'Bac +2',Debutant,'Anglais Français',Hybride
+Casablanca,'Call Centers (métiers de) - Secteur Assurance',CDI,'Bac +2',Debutant,Anglais,Hybride
+Tanger,Commercial,CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Méthodes,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Production,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,Achats,CDI,'Bac +3',Debutant,Anglais,Non
+Tanger,Audit,CDI,'Bac +5',Senior,Français,Non
+Casablanca,Gestion,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Banque (métiers de la) - Secteur Banque',CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Hôtellerie,CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,Audit,CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Rabat,'Gestion projet',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Oujda,Informatique,CDI,'Bac +2',Debutant,Français,Non
+Oujda,Production,CDI,Autre,Intermediaire,Anglais,Non
+Oujda,Production,CDI,'Bac +3',Debutant,Anglais,Non
+Oujda,Production,CDI,'Bac +3',Intermediaire,Anglais,Non
+Oujda,Production,CDI,'Bac +3',Intermediaire,Anglais,Non
+Oujda,Méthodes,CDI,'Bac +3',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Achats,Intérim,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Anglais,'Oui 100\%'
+Casablanca,Informatique,CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Production,Autre,Autre,Debutant,Français,Non
+Casablanca,Commercial,Intérim,'Bac +3',Debutant,Anglais,Non
+Rabat,Informatique,CDI,'Bac +5',Senior,Français,Non
+Casablanca,Audit,CDI,'Bac +5',Senior,'Anglais Français',Non
+Settat,Achats,CDI,'Bac +3',Intermediaire,Anglais,Non
+Safi,Santé,Autre,'Bac +5',Intermediaire,'Anglais Français',Non
+Rabat,'Assistanat de Direction',Intérim,'Bac +3',Debutant,Français,Non
+Tanger,Production,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Tanger,Achats,CDI,'Bac +5',Senior,Français,Non
+Tanger,Achats,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,Audit,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Audit,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Audit,CDI,'Bac +3',Debutant,Anglais,Non
+Casablanca,Audit,CDI,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Marrakech,'Assistanat de Direction',CDI,'Bac +3',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Production,Autre,'Bac +3',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,RH,Intérim,'Bac +3',Debutant,Français,Non
+Marrakech,'Gestion projet',CDD,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Achats,CDD,'Bac +3',Debutant,Anglais,Non
+Marrakech,Hôtellerie,CDI,'Bac +3',Senior,'Anglais Français',Non
+Casablanca,'Marketing - Secteur Cosmétique',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Distribution (métiers de la) - Gestion',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Marrakech,'Assistanat de Direction',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Assurance (métiers de l\') - Informatique',CDI,'Bac +5',Debutant,Français,Hybride
+Meknès,'Agriculture (métiers de l\') - Production',CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +3',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Oujda,Méthodes,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Administration des ventes',CDI,Autre,Debutant,Français,Non
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Français,'Oui 100\%'
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Laâyoune,'Agriculture (métiers de l\') - Secteur Agriculture',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Call Centers (métiers de) - Commercial',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,'Anglais Français','Oui 100\%'
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Français,Hybride
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Français,'Oui 100\%'
+Tanger,Gestion,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Gestion,CDI,'Bac +5',Intermediaire,Français,Non
+'Al Hoceima',Commercial,Autre,'Bac +2',Debutant,Anglais,Non
+Casablanca,RH,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Production,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +5',Senior,Français,Non
+Casablanca,Gestion,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,RH,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Rabat,Informatique,CDI,'Bac +5',Debutant,'Anglais Français','Oui 100\%'
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Assurance (métiers de l\') - Gestion',CDI,Autre,Senior,'Anglais Français',Non
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Français,'Oui 100\%'
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Français,'Oui 100\%'
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Anglais,'Oui 100\%'
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Anglais,'Oui 100\%'
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Anglais,'Oui 100\%'
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Méthodes,CDI,Autre,Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Télécoms,Autre,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Télécoms,Autre,'Bac +5','Expert ','Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Achats,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,'Electricité - Secteur Automobile',CDI,'Bac +3',Intermediaire,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Rabat,RH,CDI,'Bac +5',Senior,Anglais,Non
+Marrakech,'Enseignement - Secteur Enseignement',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Production,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,Méthodes,CDI,'Bac +5',Senior,Français,Non
+Marrakech,'Enseignement - Secteur Enseignement',CDI,'Bac +3',Intermediaire,Français,Non
+Casablanca,Communication,CDI,Autre,Intermediaire,Français,Non
+Marrakech,'Enseignement - Secteur Enseignement',CDI,'Bac +5',Senior,'Anglais Français',Non
+Agadir,Production,CDI,'Bac +2',Debutant,'Anglais Français',Non
+Agadir,Production,CDI,'Bac +5',Debutant,Anglais,Non
+Agadir,Production,CDI,'Bac +5',Intermediaire,Anglais,Non
+Agadir,'Gestion projet',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Agadir,Production,CDI,'Bac +2',Debutant,Français,Non
+Rabat,'Call Centers (métiers de) - Secteur Centre d\'appel',CDI,Autre,Debutant,Français,Non
+Agadir,'Agriculture (métiers de l\') - Secteur Agriculture',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Production,Intérim,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Audit,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Gestion,CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Banque (métiers de la) - Gestion',CDI,Autre,Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Rabat,Informatique,CDI,'Bac +5',Senior,Français,'Oui 100\%'
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Anglais,'Oui 100\%'
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,'Anglais Français','Oui 100\%'
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Français,'Oui 100\%'
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Commercial,CDI,'Bac +3',Senior,Anglais,Non
+Casablanca,'Call Centers (métiers de) - Commercial',CDI,Autre,Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Settat,Gestion,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Call Centers (métiers de) - Secteur Offshoring',CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,RH,CDI,'Bac +5','Expert ',Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Call Centers (métiers de) - Secteur Offshoring',CDI,Autre,Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Achats,Autre,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Banque (métiers de la) - Secteur Banque',CDI,'Bac +5',Debutant,Anglais,Non
+Rabat,Achats,CDI,'Bac +3',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Gestion,CDI,'Bac +5',Senior,Français,Non
+Casablanca,'Call Centers (métiers de) - Commercial',CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Assistanat de Direction',Intérim,'Bac +3',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Gestion,CDI,Autre,Intermediaire,'Anglais Français',Hybride
+Casablanca,'Assistanat de Direction',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Administration des ventes',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Administration des ventes',CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Achats,CDI,'Bac +5',Senior,Anglais,Non
+Marrakech,Communication,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Casablanca,Communication,CDI,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,'Direction Financière - Direction de la Stratégie',CDI,Autre,Senior,'Anglais Français',Non
+Rabat,Gestion,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +5',Debutant,Anglais,Hybride
+Casablanca,'Assistanat de Direction',CDI,'Bac +3',Debutant,Anglais,Non
+Tanger,Production,CDI,Autre,Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Casablanca,Informatique,CDI,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,RH,CDI,'Bac +3',Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Anglais,Hybride
+Casablanca,Gestion,CDI,'Bac +5',Debutant,Français,Non
+Agadir,Méthodes,CDI,'Bac +5',Intermediaire,Anglais,Non
+Tanger,RH,CDI,'Bac +5','Expert ','Anglais Français',Non
+Casablanca,RH,Stage,'Bac +2',Debutant,'Anglais Français',Hybride
+Casablanca,Commercial,CDI,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,Achats,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Electricité - Gestion projet',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,Production,CDI,'Bac +5','Expert ',Français,Non
+Casablanca,Gestion,CDI,'Bac +5',Intermediaire,Français,Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,'Call Centers (métiers de) - Commercial',CDI,Autre,Debutant,Anglais,Non
+Rabat,Informatique,CDI,Autre,Senior,Français,Hybride
+Casablanca,'Administration des ventes',CDI,Autre,Intermediaire,Français,Non
+Casablanca,Commercial,CDI,'Bac +3',Debutant,'Anglais Français',Non
+Marrakech,Santé,CDI,'Bac +3',Debutant,Français,Non
+Marrakech,Santé,CDI,'Bac +3',Intermediaire,Anglais,Non
+Rabat,'Call Centers (métiers de) - Secteur Centre d\'appel',CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Audit,CDD,'Bac +5',Debutant,Anglais,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Electricité - Production',Autre,Autre,Debutant,'Anglais Français',Non
+Casablanca,'Electricité - Production',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Méthodes,CDI,'Bac +2','Expert ',Français,Non
+Marrakech,'Assistanat de Direction',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Marrakech,'Gestion projet',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Marrakech,RH,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,'Gestion projet',CDI,Autre,Intermediaire,'Anglais Français',Non
+Marrakech,'Administration des ventes',CDD,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+Marrakech,'Assistanat de Direction',CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Commercial,Intérim,'Bac +2',Debutant,Français,Non
+Casablanca,Commercial,Intérim,'Bac +2',Debutant,'Anglais Français',Non
+Marrakech,Commercial,Intérim,'Bac +2',Debutant,Anglais,Non
+Agadir,Commercial,Intérim,'Bac +2',Debutant,Anglais,Non
+Rabat,Travaux,Intérim,'Bac +3',Debutant,Anglais,Non
+Rabat,'Enseignement - Secteur Enseignement',CDI,'Bac +3',Intermediaire,Français,Non
+Marrakech,Méthodes,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,'Assistanat de Direction',CDI,'Bac +5',Senior,Français,Non
+Marrakech,Communication,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+Marrakech,'Environnement (métiers de l\') - Production',CDI,'Bac +5',Intermediaire,Français,Non
+Marrakech,Gestion,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Marrakech,'Enseignement - Santé',CDI,'Bac +3',Debutant,'Anglais Français',Non
+Marrakech,'Enseignement - Secteur Enseignement',CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Marrakech,RH,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,Achats,CDI,'Bac +5',Intermediaire,Français,Non
+Marrakech,Audit,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,'Enseignement - Secteur Enseignement',CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Marrakech,'Enseignement - Secteur Enseignement',CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Marrakech,'Electricité - Production',CDI,'Bac +2',Intermediaire,Français,Non
+Marrakech,Télécoms,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +3',Senior,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Agadir,Production,CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Direction Financière - Secteur Indifférent',CDI,'Bac +5','Expert ',Anglais,Non
+Rabat,Caméraman,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Commercial,CDI,'Bac +3',Intermediaire,Français,Non
+Casablanca,RH,Stage,'Bac +2',Debutant,Anglais,Non
+Casablanca,RH,CDI,Autre,Debutant,Anglais,Non
+Casablanca,RH,CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Commercial,CDI,'Bac +3',Intermediaire,Français,Non
+Casablanca,'Assurance (métiers de l\') - Secteur Assurance',CDI,'Bac +5',Intermediaire,Anglais,Hybride
+Rabat,Gestion,CDI,'Bac +5','Expert ','Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Agadir,RH,CDI,'Bac +3',Intermediaire,Anglais,'Oui 100\%'
+Casablanca,Informatique,CDI,'Bac +5',Senior,'Anglais Français',Hybride
+Marrakech,'Administration des ventes',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Audit,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Achats,Intérim,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,Achats,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Anglais,Non
+Tanger,Multimédia,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Production,CDI,'Bac +2',Senior,Français,Non
+Agadir,Gestion,CDI,'Bac +5',Intermediaire,Anglais,Non
+Rabat,Commercial,Autre,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Marrakech,Travaux,CDI,'Bac +5',Senior,Français,Non
+Marrakech,Travaux,CDI,'Bac +5',Senior,Français,Non
+Marrakech,Travaux,CDI,'Bac +5',Senior,'Anglais Français',Non
+Marrakech,Travaux,CDI,'Bac +5',Senior,Français,Non
+Marrakech,Travaux,CDI,'Bac +5',Senior,Anglais,Non
+Marrakech,Méthodes,CDI,'Bac +5',Senior,'Anglais Français',Non
+Marrakech,Travaux,CDI,'Bac +5',Senior,'Anglais Français',Non
+Marrakech,Travaux,CDI,'Bac +2',Senior,'Anglais Français',Non
+Agadir,Production,CDI,'Bac +5',Intermediaire,Anglais,Non
+Agadir,Production,CDI,'Bac +5',Intermediaire,Anglais,Non
+Fès,Informatique,CDI,'Bac +5',Intermediaire,Français,Hybride
+Casablanca,Gestion,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Commercial,CDI,Autre,Intermediaire,Français,Non
+Tanger,Production,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,'Call Centers (métiers de) - Commercial',CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Gestion,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Rabat,RH,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,RH,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,'Call Centers (métiers de) - Secteur Centre d\'appel -',Autre,'Bac +3',Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Casablanca,Méthodes,CDI,'Bac +5',Senior,'Anglais Français',Non
+Rabat,Informatique,Freelance,Autre,Intermediaire,Anglais,Hybride
+Tanger,Achats,Intérim,'Bac +5',Debutant,Anglais,Non
+Rabat,Informatique,Freelance,Autre,Intermediaire,Anglais,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Gestion,Autre,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Informatique,Autre,'Bac +5',Senior,Français,Non
+Casablanca,Informatique,Autre,'Bac +5',Senior,Français,Non
+Casablanca,Gestion,CDI,Autre,Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Rabat,Informatique,Freelance,Autre,Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,Français,Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Tanger,Commercial,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,RH,CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Rabat,Communication,CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Call Centers (métiers de) - Commercial',CDI,Autre,Debutant,Français,Non
+Casablanca,Gestion,Stage,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Call Centers (métiers de) - Commercial',CDI,Autre,Debutant,Anglais,Non
+Casablanca,Gestion,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Audit,CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Administration des ventes',CDI,Autre,Intermediaire,Anglais,Non
+Casablanca,'Call Centers (métiers de) - Secteur Centre d\'appel',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Call Centers (métiers de) - Secteur Centre d\'appel',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Call Centers (métiers de) - Commercial',CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Français,Non
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Anglais,Non
+Rabat,Commercial,CDI,'Bac +5',Intermediaire,Anglais,Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +3',Intermediaire,Anglais,Non
+Marrakech,Commercial,CDI,'Bac +5','Expert ',Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Achats,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,Gestion,Stage,'Bac +3',Debutant,Français,Non
+Casablanca,RH,CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Production,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Call Centers (métiers de) - Secteur Centre d\'appel',CDI,'Bac +2',Debutant,Anglais,Non
+Rabat,Informatique,CDI,'Bac +5','Expert ',Anglais,Hybride
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,'Anglais Français',Hybride
+Casablanca,Production,CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Audit,CDI,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,Audit,CDI,Autre,Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Gestion,CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Assistanat de Direction',CDI,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Communication,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Agadir,Production,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Agadir,Production,CDI,'Bac +2',Intermediaire,Anglais,Non
+Agadir,Production,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Agadir,Production,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Agadir,Production,CDI,'Bac +2',Senior,'Anglais Français',Non
+Agadir,Production,CDI,'Bac +2',Intermediaire,Français,Non
+Agadir,Production,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Marrakech,'Administration des ventes',CDI,'Bac +5',Senior,Français,Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+Marrakech,Méthodes,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Marrakech,'Administration des ventes',CDI,'Qualification avant Bac',Intermediaire,Anglais,Non
+Marrakech,'Administration des ventes',CDI,'Bac +5',Senior,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Achats,Intérim,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Marketing - Secteur Cosmétique',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,Audit,CDI,'Bac +5','Expert ',Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Communication,Intérim,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +3',Debutant,Anglais,Non
+Marrakech,'Enseignement - Secteur Conseil',CDI,'Bac +5',Senior,Français,Non
+Casablanca,Production,CDD,'Bac +2',Debutant,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Anglais,Hybride
+Casablanca,Achats,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,RH,CDI,Autre,Debutant,Français,Non
+Casablanca,'Call Centers (métiers de) - Secteur Centre d\'appel -',Autre,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,Gestion,CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Commercial,CDI,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,Logistique,CDI,'Bac +5',Intermediaire,Français,Non
+Agadir,'Administration des ventes',CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Audit,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Logistique,CDI,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Logistique,CDI,'Bac +3',Debutant,Français,Non
+Rabat,Logistique,CDI,'Bac +3',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Anglais,Hybride
+Casablanca,'Call Centers (métiers de) - RH',CDI,'Bac +3',Debutant,Anglais,Non
+Casablanca,Informatique,Stage,'Bac +5',Debutant,Anglais,Hybride
+Casablanca,Achats,CDI,'Bac +5',Intermediaire,Français,Non
+Fès,Audit,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,Informatique,Stage,'Bac +5',Debutant,Anglais,Hybride
+Casablanca,Informatique,Stage,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Informatique,Stage,'Bac +5',Debutant,Français,Non
+Casablanca,Commercial,CDI,Autre,Intermediaire,'Anglais Français',Non
+Marrakech,Immobilier,CDI,'Bac +3',Senior,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Agadir,Achats,CDI,'Bac +2',Intermediaire,Français,Non
+Agadir,Production,CDI,'Bac +2',Intermediaire,Français,Non
+Rabat,Informatique,CDI,'Bac +5',Senior,Anglais,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,RH,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Agadir,'Environnement (métiers de l\') - Secteur Extraction',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Rabat,Informatique,CDI,'Bac +5',Senior,'Anglais Français',Hybride
+Rabat,Informatique,CDI,'Bac +5',Senior,'Anglais Français',Hybride
+Agadir,Production,CDI,'Bac +5',Senior,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Marrakech,Informatique,CDI,Autre,Intermediaire,'Anglais Français',Non
+Casablanca,Urbanisme,CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Gestion,CDI,'Bac +5',Senior,'Anglais Français',Non
+Casablanca,Communication,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Communication,CDI,'Bac +5',Intermediaire,Anglais,Non
+Agadir,Production,CDI,'Bac +5',Senior,Français,Non
+Casablanca,Achats,CDI,'Bac +3',Intermediaire,Français,Non
+Rabat,'Gestion projet',CDI,'Bac +5',Intermediaire,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Rabat,Informatique,CDI,'Bac +5',Intermediaire,Anglais,Hybride
+Casablanca,RH,CDI,'Bac +5',Debutant,Français,Hybride
+Casablanca,'Gestion projet',CDD,'Bac +5',Senior,Anglais,Non
+Casablanca,'Banque (métiers de la) - Secteur Banque',CDI,'Bac +5',Senior,Anglais,Non
+Rabat,'Banque (métiers de la) - Secteur Banque',CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Fès,Production,CDI,Autre,Debutant,Anglais,Non
+Oujda,Production,CDI,'Bac +3',Intermediaire,Anglais,Non
+Oujda,Production,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Agadir,RH,CDI,Autre,Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Oujda,Logistique,CDI,Autre,Debutant,Anglais,Non
+Rabat,Commercial,Autre,'Bac +2',Debutant,Anglais,Non
+Rabat,Télécoms,Stage,'Bac +5',Debutant,Anglais,Hybride
+Casablanca,Communication,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Marrakech,Commercial,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Marrakech,'Enseignement - Secteur Enseignement',CDI,'Bac +2',Intermediaire,Français,Non
+Rabat,Gestion,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Commercial,Autre,'Bac +3',Debutant,Anglais,Non
+Rabat,Gestion,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Production,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Marrakech,Production,CDI,'Qualification avant Bac',Intermediaire,'Anglais Français',Non
+Marrakech,RH,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Français,Hybride
+Casablanca,'Enseignement - Gestion projet',CDD,'Bac +5',Senior,'Anglais Français',Non
+Tanger,Hôtellerie,CDI,'Bac +2',Intermediaire,Français,Non
+Fès,Méthodes,CDI,'Bac +5',Intermediaire,Anglais,Non
+Tanger,Hôtellerie,CDI,'Bac +2',Intermediaire,Français,Non
+Tanger,Hôtellerie,CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,Achats,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Production,CDI,'Bac +5',Senior,Anglais,Non
+Rabat,Informatique,CDI,'Bac +5',Senior,Français,Hybride
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Fès,'Call Centers (métiers de) - Secteur Centre d\'appel',CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,'Anglais Français','Oui 100\%'
+Casablanca,Informatique,CDI,'Bac +5',Senior,Français,'Oui 100\%'
+Tanger,'Marketing - Secteur Agence pub',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,Anglais,Hybride
+Agadir,Gestion,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Audit,CDI,'Bac +5',Intermediaire,Anglais,Non
+Casablanca,Méthodes,CDI,'Bac +5',Senior,Français,Non
+Rabat,Caméraman,Stage,'Bac +2',Debutant,Français,Non
+Casablanca,'Banque (métiers de la) - Secteur Banque',CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,Anglais,'Oui 100\%'
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +5',Senior,'Anglais Français','Oui 100\%'
+Rabat,Informatique,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Marrakech,'Gestion projet',CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,'Assistanat de Direction',CDI,'Bac +2',Debutant,Français,Non
+Tanger,Commercial,CDI,'Bac +3',Debutant,Anglais,Non
+Casablanca,Audit,CDI,'Bac +5',Senior,Français,Non
+Casablanca,Audit,CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Gestion,CDI,'Bac +5',Senior,Anglais,Non
+Marrakech,'Direction des Ressources Humaines - Secteur Autres Industries',CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,Informatique,Autre,Autre,Intermediaire,'Anglais Français',Hybride
+Casablanca,Achats,CDI,Autre,Intermediaire,'Anglais Français',Non
+Casablanca,Achats,CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Direction Financière - Secteur Immobilier',CDI,'Bac +5',Senior,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Direction Informatique - Direction Technique',CDI,'Bac +5','Expert ',Français,Non
+Casablanca,Achats,CDI,'Bac +3',Debutant,'Anglais Français',Non
+Casablanca,Commercial,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,Autre,Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Commerce,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Banque,CDI,Autre,Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Senior,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Assurance,CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Télécommunications,CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Comptabilité,CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Autres,CDD,Autre,Debutant,Anglais,Non
+Casablanca,Informatique,Intérim,'Bac +2',Debutant,Anglais,Non
+Casablanca,Tourisme,CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Commerce,CDD,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,Education,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,BTP,CDD,Autre,Debutant,Français,Non
+Casablanca,'Centres d\'appels','Free Lance',Autre,Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,Autre,Debutant,Anglais,Non
+Casablanca,Comptabilité,CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Fraichement diplômé',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,'Fraichement diplômé',Intérim,'Bac +5',Debutant,Français,Non
+Casablanca,Banque,CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Assurance,CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,Autre,Debutant,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Industrie pétrolière',CDI,'Bac +5',Intermediaire,Français,Non
+Casablanca,Autres,'Lettre d\'Engagement','Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Industrie automobile',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,Autres,CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,Comptabilité,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Casablanca,Conseil,CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,Autre,Debutant,Anglais,Non
+Casablanca,Conseil,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Débutant (de 1 à 3 ans)',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Commerce,CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Artisanat,CDD,Autre,Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Sports,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Commerce,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,Edition,CDI,Autre,Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Débutant (de 1 à 3 ans)',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Conseil,CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Autres,CDI,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +5',Debutant,Français,Non
+Casablanca,Banque,'Lettre d\'Engagement','Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Santé,CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Junior (de 3 à 5 ans)',CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,Informatique,CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Informatique,CDI,'Bac +3',Debutant,Anglais,Non
+Casablanca,Commerce,Intérim,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Informatique,CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Tourisme,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,Tourisme,CDI,'Bac +5',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels','Free Lance','Bac +5',Debutant,Français,Non
+Casablanca,'Centres d\'appels','Lettre d\'Engagement',Autre,Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,Informatique,CDI,'Bac +5',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels','Free Lance','Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,Autre,Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Grande distribution',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Santé,CDD,'Bac +3',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Télécommunications,CDI,Autre,Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Enseignement,CDD,Autre,Debutant,Anglais,Non
+Casablanca,Commerce,'CDI / CDD',Autre,Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels','Free Lance','Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,Banque,CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Autres,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,Autres,CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Tourisme,CDD,Autre,Debutant,Français,Non
+Casablanca,'Débutant (de 1 à 3 ans)','Free Lance','Bac +5',Debutant,Français,Non
+Casablanca,'Industrie textile',CDD,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Energies (production, distribution...)','CDI / Intérim','Bac +2',Debutant,Anglais,Non
+Casablanca,Banque,CDI,Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,Autres,Intérim,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Fraichement diplômé',Intérim,'Bac +5',Debutant,Anglais,Non
+Casablanca,BTP,'CDI / CDD / Free Lance','Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Industrie automobile',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Comptabilité,CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,Informatique,'Free Lance','Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels','Free Lance',Autre,Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,Informatique,CDD,'Bac +3',Debutant,Français,Non
+Casablanca,BTP,CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,Assurance,CDD,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,BTP,CDI,'Bac +3',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels','CDI / Free Lance','Bac +2',Intermediaire,Anglais,Non
+Casablanca,Conseil,'Lettre d\'Engagement','Bac +2',Debutant,Français,Non
+Casablanca,Tourisme,CDI,'Bac +3',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,Autre,Intermediaire,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDD,'Bac +2',Intermediaire,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,Assurance,CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,Assurance,CDI,'Bac +2',Intermediaire,Français,Non
+Casablanca,Allemand,CDI,'Bac +5',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,Autres,CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Industries (autres)',CDI,'Bac +2',Intermediaire,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Anglais,Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
+Casablanca,Télécommunications,CDI,Autre,Debutant,'Anglais Français',Non
+Casablanca,'Centres d\'appels',CDI,'Bac +2',Debutant,Français,Non
