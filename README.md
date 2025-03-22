@@ -21,33 +21,9 @@ Ce projet consiste en la réalisation d'une application utilisant le Machine Lea
   - JDBC pour l'accès aux bases de données
   - JUnit pour les tests unitaires
   
-## Exigences du Projet
-- **Mini-projet en binôme ou trinôme**
-- **Présentation (10 slides max) + Démo**
-- **Livrables** :
-  - Code source
-  - Rapport technique (4 à 8 pages en anglais)
-  - UML (Diagrammes de cas d'utilisation, classes et séquence)
-  - Cahier de tests avec résultats
+![image](https://github.com/user-attachments/assets/92255952-131f-4793-8d24-6f11f165a9fc)
+![image](https://github.com/user-attachments/assets/8f47c877-02d0-4200-ae70-e5137051ebdc)
+![image](https://github.com/user-attachments/assets/438e8d38-c119-4ac2-8aa2-bba8fac3844f)
 
-## Critères d'Évaluation
-- **Travail de groupe & Communication** *(0 à 10 pts)*
-- **Implémentation des fonctionnalités Java** *(0 à 30 pts)*
-- **Respect du cycle de développement** *(0 à 9 pts)*
-- **Esprit d'innovation** *(bonus pour les idées novatrices)*
-- **Nombre de lignes de code, classes et sites scrappés**
 
-## Barème de Notation
-| Score | Mention |
-|--------|-----------|
-| 12 | Acceptable |
-| 14 | Moyen |
-| 16+ | Bien/Excellent |
 
-⚠ **Attention** : Un taux de similarité important dans le code peut entraîner un rattrapage.
-
-## Participation à la Compétition
-Un bonus jusqu'à **+5 points** sur la note de l'examen final est accordé pour la participation à une compétition en groupe large.
-
----
-🚀 **Rejoignez-nous dans cette aventure technologique pour explorer le Machine Learning et le NLP avec Java !**
